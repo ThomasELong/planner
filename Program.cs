@@ -30,10 +30,15 @@ namespace Planner
             numberThree.Purchase("Derek Buckley");
 
             
-            numberOne.BuildingReport();
-            numberTwo.BuildingReport();
-            numberThree.BuildingReport();
+            City Megalopolis = new City("Megalopolis");
 
+            Megalopolis.addBuilding(numberOne);
+            Megalopolis.addBuilding(numberTwo);
+            Megalopolis.addBuilding(numberThree);
+
+            foreach (Building building in Megalopolis.Buildings()) {
+                building.BuildingReport();
+            };
             
         }
     }
