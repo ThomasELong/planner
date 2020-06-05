@@ -4,14 +4,18 @@ namespace Planner
 {
 public class Building
     {
+        //private fields
         private string _designer = "Thomas Long";
         private DateTime _dateConstructed = DateTime.Now;
         private string _address;
         private string _owner;
+
+        // public properties
         public int Stories { get; set; }
         public double Width { get; set; }
         public double Depth { get; set; }
-        public double volume {
+        public double volume 
+        {
             get
             { return Width * Depth * (3 * Stories); }
         }
